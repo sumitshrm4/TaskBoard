@@ -1,9 +1,9 @@
 # TaskBoard
 
-Overview
+## Overview
 TaskBoard is a minimal, well‑layered .NET Core Web API that implements a simple task board (Trello/Jira style) with a clean architecture: Controllers → Services → Repositories → EF Core DbContext. The solution includes an in‑memory default configuration for local development and a test project with NUnit tests that exercise services and repositories.
 
-Features
+## Features
 Create, read, update, delete tasks with name, description, deadline, favoriting, sort order, and optional attachment URL.
 
 Create and list columns (ToDo, In Progress, Done seeded).
@@ -18,17 +18,17 @@ Unit and integration style tests using NUnit and EF Core InMemory provider.
 
 Swagger enabled for quick API exploration in development.
 
-Prerequisites
+## Prerequisites
 .NET 8 SDK installed.
 
 Optional for production: SQL Server or Azure SQL if you swap the DbContext provider.
 
-Recommended IDE: Visual Studio 2022/2023 or VS Code.
+## Recommended IDE: Visual Studio 2022/2023 or VS Code.
 
-Quick Start
+## Quick Start
 Clone or extract the repository and open the solution TaskBoard.sln in Visual Studio or use the CLI.
 
-Restore and build:
+## Restore and build:
 
 bash
 dotnet restore
@@ -52,17 +52,17 @@ TaskBoard.Tests — NUnit test project referencing the API project.
 
 Key folders in TaskBoard.Api
 
-Controllers — HTTP endpoints (thin controllers).
+## Controllers — HTTP endpoints (thin controllers).
 
-Services — ITaskService, IColumnService, TaskService, ColumnService.
+## Services — ITaskService, IColumnService, TaskService, ColumnService.
 
-Repositories — IRepository<T>, GenericRepository<T>, ITaskRepository, IColumnRepository, TaskRepository, ColumnRepository.
+## Repositories — IRepository<T>, GenericRepository<T>, ITaskRepository, IColumnRepository, TaskRepository, ColumnRepository.
 
-Data — AppDbContext with seeded columns.
+## Data — AppDbContext with seeded columns.
 
-Models — TaskItem, Column.
+## Models — TaskItem, Column.
 
-Dtos — request DTOs for create operations.
+## Dtos — request DTOs for create operations.
 
-Testing CI and Azure Notes
+## Testing CI and Azure Notes
 Tests: NUnit tests use EF Core InMemory to validate service and repository behavior. Run dotnet test locally or in CI.
