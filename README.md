@@ -52,17 +52,23 @@ TaskBoard.Tests — NUnit test project referencing the API project.
 
 Key folders in TaskBoard.Api
 
-## Controllers — HTTP endpoints (thin controllers).
+#### Controllers — 
+HTTP endpoints (thin controllers).
 
-## Services — ITaskService, IColumnService, TaskService, ColumnService.
+#### Services — 
+ITaskService, IColumnService, TaskService, ColumnService.
 
-## Repositories — IRepository<T>, GenericRepository<T>, ITaskRepository, IColumnRepository, TaskRepository, ColumnRepository.
+#### Repositories — 
+IRepository<T>, GenericRepository<T>, ITaskRepository, IColumnRepository, TaskRepository, ColumnRepository.
 
-## Data — AppDbContext with seeded columns.
+#### Data — 
+AppDbContext with seeded columns.
 
-## Models — TaskItem, Column.
+#### Models — 
+TaskItem, Column.
 
-## Dtos — request DTOs for create operations.
+#### Dtos — 
+request DTOs for create operations.
 
-## Testing CI and Azure Notes
+#### Testing CI and Azure Notes
 Tests: NUnit tests use EF Core InMemory to validate service and repository behavior. Run dotnet test locally or in CI.
